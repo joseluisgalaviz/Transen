@@ -13,3 +13,185 @@
  *= require_tree .
  *= require_self
  */
+
+html{
+    background-color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+
+
+#bg{position:fixed;top:-50%;left:-50%;width:200%;height:200%}
+#bg .overlay,#bg img,#main{position:absolute;margin:auto;top:0;bottom:0;left:0;right:0}
+#bg .overlay{background-color:#000;filter:alpha(opacity=40);opacity:.4}
+#bg .overlay.white{background-color:#fff;filter:alpha(opacity=60);opacity:.6}
+#green_border{position:fixed;top:0;left:0;width:100%;height:6px;border-top:6px solid deepskyblue}
+
+
+#main, .header-main{
+    margin-top: 15%;
+    text-align: center;
+    width: 40%;
+    color: white;
+}
+
+.doc{
+    margin-top: 40px;
+}
+
+div .btn{
+    background-color: deepskyblue;
+    color: white;
+    padding: 3px 5px;
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid deepskyblue;
+    margin: auto;
+    width: 40%;
+}
+
+.main-footer{
+    left:0;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    bottom:0;
+    position: fixed;
+}
+
+.btn > a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.container{
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: darkslategray;
+}
+
+aside{
+    background-color: darkslategray;
+    width: 20%;
+    float: left;
+    bottom: 0;
+    top:0;
+    left:0;
+    color:white;
+    position: fixed;
+}
+
+aside a {
+    text-decoration: none;
+    color:white;
+}
+
+aside a :hover {
+    color:deepskyblue;
+}
+
+
+aside ul{
+    list-style: none;
+}
+
+aside ul li{
+    padding: 5px 3px;
+    margin: auto;
+    width: 50%;
+    clear: both;
+    text-align: left;
+}
+
+aside ul li :hover{
+
+    color:deepskyblue;
+}
+
+.primary-header{
+    text-align: center;
+}
+
+
+.section-wrapper{
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+section{
+    width: 80%;
+    float: right;
+}
+
+h3 span{
+    color:darkslategray;
+    font-size: small;
+}
+
+.parametros-desc{
+    padding: 5px 5px;
+    width: 40%;
+    border: 1px solid #0066ff;
+}
+
+.tipo-dato{
+    color:forestgreen;
+    font-weight: 600;
+}
+
+.nombre-parametro{
+    font-weight: 600;
+    text-align: right;
+}
+
+.metodo{
+    background-color: forestgreen;
+    color:white;
+    border: 1px solid forestgreen;
+    border-radius: 2px 2px;
+    font-weight: 700;
+    padding: 3px 3px;
+}
+
+.url-acceso {
+    border: 1px solid forestgreen;
+    padding: 3px 0;
+    width: 60%;
+}
+
+.peticion-ejemplo{
+    border: 1px solid deepskyblue;
+    padding: 3px 3px;
+    width: 60%;
+    background-color: #EFEFEF;
+}
+
+
+.codigo-json{
+    background-color: #e6e6e6;
+    border: 1px solid #bfbfbf;
+    width: 60%;
+    font-family: "Source Code Pro", Monaco, monospace;
+    font-size: .8em;
+}
+
+.label-json{
+    border: 1px solid deepskyblue;
+    padding: 2px 5px;
+    border-radius: 2px 2px;
+    font-weight: 700;
+    background-color: white;
+    color: deepskyblue;
+}
+
+.clave-elemento{
+    font-weight: 700;
+    color: forestgreen;
+}
+.valor-elemento{
+    color:darkslategray;
+}

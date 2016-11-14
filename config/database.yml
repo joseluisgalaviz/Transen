@@ -23,8 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: Transen_development
-
+  database: Transen
+  username: rails_user
+  password: zxcasdqwe
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -57,7 +58,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Transen_test
+  database: Transen
+  username: rails_user
+  password: zxcasdqwe
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: Transen_production
-  username: Transen
-  password: <%= ENV['TRANSEN_DATABASE_PASSWORD'] %>
+  database: Transen
+  username: rails_user
+  password: zxcasdqwe

@@ -1,0 +1,140 @@
+
+  <aside>
+    <header class='primary-header' role='banner'>
+      <h1 class='primary-logo'>
+        <a href='#'>
+          <span>Transen API</span><br>
+        </a>
+      </h1>
+    </header>
+    <div class='aside-micro'>
+      <nav class='primary-nav' role='navigation'>
+        <ul>
+          <li>
+            <a href='#'>
+              Llamada 1
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Llamada 2
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              Llamada 3
+            </a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+  </aside>
+
+  <section>
+    <div class="section-wrapper">
+      <div class="header-doc">
+       <h1>Objetivos Generales</h1>
+        <p>
+         Ofrecer servicio para el conocimiento de empresas de transportes y
+         sus rutas.
+        </p>
+         <hr>
+      </div>
+      <div class="metodos">
+        <h2>Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
+        <div class="parametros">
+          <h3>Parametros:</h3>
+          <div class="parametros-desc">
+            <span class="nombre-parametro">lat</span> : <span class="tipo-dato">float</span> <br>
+            <span class="nombre-parametro">lon </span> : <span class="tipo-dato">float</span>
+          </div>
+        </div>
+
+        <div class="acceso">
+        <h3>Punto de acceso</h3>
+          <div class="url-acceso">
+            <span class="metodo">GET</span>
+            https://app.heroku.com/ruta_ubicacion
+          </div>
+        </div>
+
+        <div class="peticion">
+        <h3>Ejemplo de petición</h3>
+        <div class="peticion-ejemplo" >
+          https://app.heroku.com/ruta_ubicacion?lat=31.8713375&lon=-116.6678474
+        </div>
+        </div>
+
+        <div class="respuesta">
+          <h3>Ejemplo de respuesta  <span class="label-json">json</span></h3>
+          <div class="respuesta-ejemplo" >
+            <pre class="codigo-json">
+
+              {
+               "<span class="clave-elemento">Estado</span>" : 1,
+               "<span class="clave-elemento">Resultados</span>" : [
+                 {
+                   "<span class="clave-elemento">Empresa</span>" : "<span class="valor-elemento">El Vigia</span>",
+                   "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9 – Sauzal</span>"
+                 },
+                 {
+                 "<span class="clave-elemento">Empresa</span>" : "<span class="valor-elemento">Transporte Brisa</span>",
+                 "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9 - Sauzal</span>"
+                 } ]
+              }
+            </pre>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+
+      <div class="metodos">
+        <h2>Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
+        <div class="parametros">
+          <h3>Parametros:</h3>
+          <div class="parametros-desc">
+            <span class="nombre-parametro">Nombre</span> : <span class="tipo-dato">string</span>
+          </div>
+        </div>
+
+        <div class="acceso">
+          <h3>Punto de acceso</h3>
+          <div class="url-acceso">
+            <span class="metodo">GET</span>
+            https://app.heroku.com/ruta_destino
+          </div>
+        </div>
+
+        <div class="peticion">
+          <h3>Ejemplo de petición</h3>
+          <div class="peticion-ejemplo" >
+            https://app.heroku.com/ruta_destino?destino=CICESE
+          </div>
+        </div>
+
+        <div class="respuesta">
+          <h3>Ejemplo de respuesta  <span class="label-json">json</span></h3>
+          <div class="respuesta-ejemplo" >
+            <pre class="codigo-json">
+
+            {
+              "<span class="clave-elemento">Estado</span>" : 1,
+              "<span class="clave-elemento">Resultados</span>" : [
+                 {
+                   "<span class="clave-elemento">Empresa</span>" : "<span class="valor-elemento">El Vigia</span>",
+                   "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9 – Sauzal</span>"
+                 },
+                 {
+                 "<span class="clave-elemento">Empresa</span>" : "<span class="valor-elemento">Transporte Brisa</span>",
+                 "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9 - Sauzal</span>"
+                 } ]
+            }
+            </pre>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+    </div>
+  </section>
