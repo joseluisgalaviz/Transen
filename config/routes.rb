@@ -4,7 +4,14 @@ Rails.application.routes.draw do
 
   get 'documentacion' => 'api#documentacion'
 
+  #Formularios para el ingreso de datos
+  get 'rutas' => 'ingresar#rutas'
+  post 'rutas_guardar' => 'ingresar#rutas_guardar'
+  get 'empresas' => 'ingresar#empresas'
+  post 'empresas_guardar' => 'ingresar#empresas_guardar'
+
   #Metodos disponibles para consultas
-  get 'ruta_ubicacion' => 'api#ruta_ubicacion'
+  get 'api/ruta_ubicacion' => 'api#ruta_ubicacion'
+  get 'api/ruta_destino' => 'api#ruta_destino'
 
 end

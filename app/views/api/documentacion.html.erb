@@ -11,18 +11,18 @@
       <nav class='primary-nav' role='navigation'>
         <ul>
           <li>
-            <a href='#'>
-              Llamada 1
+            <a href='#h2-ubicacion'>
+              Ubicación destino
             </a>
           </li>
           <li>
-            <a href='#'>
-              Llamada 2
+            <a href='#h2-destino'>
+              Nombre Destino
             </a>
           </li>
           <li>
-            <a href='#'>
-              Llamada 3
+            <a href='#h2-paradas'>
+              Paradas en un radio
             </a>
           </li>
         </ul>
@@ -41,7 +41,7 @@
          <hr>
       </div>
       <div class="metodos">
-        <h2>Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
+        <h2 id="h2-ubicacion">Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
         <div class="parametros">
           <h3>Parametros:</h3>
           <div class="parametros-desc">
@@ -54,14 +54,14 @@
         <h3>Punto de acceso</h3>
           <div class="url-acceso">
             <span class="metodo">GET</span>
-            https://app.heroku.com/ruta_ubicacion
+            https://app.heroku.com/api/ruta_ubicacion
           </div>
         </div>
 
         <div class="peticion">
         <h3>Ejemplo de petición</h3>
         <div class="peticion-ejemplo" >
-          https://app.heroku.com/ruta_ubicacion?lat=31.8713375&lon=-116.6678474
+          https://app.heroku.com/api/ruta_ubicacion?lat=31.8713375&lon=-116.6678474
         </div>
         </div>
 
@@ -90,7 +90,7 @@
       </div>
 
       <div class="metodos">
-        <h2>Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
+        <h2 id="h2-destino">Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
         <div class="parametros">
           <h3>Parametros:</h3>
           <div class="parametros-desc">
@@ -102,14 +102,14 @@
           <h3>Punto de acceso</h3>
           <div class="url-acceso">
             <span class="metodo">GET</span>
-            https://app.heroku.com/ruta_destino
+            https://app.heroku.com/api/ruta_destino
           </div>
         </div>
 
         <div class="peticion">
           <h3>Ejemplo de petición</h3>
           <div class="peticion-ejemplo" >
-            https://app.heroku.com/ruta_destino?destino=CICESE
+            https://app.heroku.com/api/ruta_destino?destino=CICESE
           </div>
         </div>
 
@@ -130,6 +130,61 @@
                  "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9 - Sauzal</span>"
                  } ]
             }
+            </pre>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+
+      <div class="metodos">
+        <h2 id="h2-paradas">Obtener las ubicaciones donde tomar camiones dentro de un radio especificado <span>GET</span></h2>
+        <div class="parametros">
+          <h3>Parametros:</h3>
+          <div class="parametros-desc">
+            <span class="nombre-parametro">lat</span> : <span class="tipo-dato">decimal</span>
+            <span class="nombre-parametro">lon</span> : <span class="tipo-dato">decimal</span>
+            <span class="nombre-parametro">rad</span> : <span class="tipo-dato">decimal</span>
+          </div>
+        </div>
+
+        <div class="acceso">
+          <h3>Punto de acceso</h3>
+          <div class="url-acceso">
+            <span class="metodo">GET</span>
+            https://app.heroku.com/api/ubicaciones_paradas
+          </div>
+        </div>
+
+        <div class="peticion">
+          <h3>Ejemplo de petición</h3>
+          <div class="peticion-ejemplo" >
+            https://app.heroku.com/api/ubicaciones_paradas?lat=31.8713375&lon=-116.6678474&rad=1000
+          </div>
+        </div>
+
+        <div class="respuesta">
+          <h3>Ejemplo de respuesta  <span class="label-json">json</span></h3>
+          <div class="respuesta-ejemplo" >
+            <pre class="codigo-json">
+
+              {
+                "<span class="clave-elemento">Estado</span>" : 1,
+                "<span class="clave-elemento">Resultados</span>" : [
+                  {
+                    "<span class="clave-elemento">Transporte</span>" : "<span class="valor-elemento">El Vigía</span>",
+                    "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9-Sauzal</span>",
+                    "<span class="clave-elemento">lat</span>" : 31.866508,
+                    "<span class="clave-elemento">lon</span>" : -116.667697
+                  },
+                  {
+                    "<span class="clave-elemento">Transporte</span>" : "<span class="valor-elemento">Trasnportes Brisa</span>",
+                    "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9-Sauzal</span>",
+                    "<span class="clave-elemento">lat</span>" : 31.866796,
+                    "<span class="clave-elemento">lon</span>" : -116.667628
+                  } ]
+                }
+
             </pre>
           </div>
         </div>

@@ -1,0 +1,19 @@
+
+<div class="formulario">
+  <h1>Ingresar Nueva Empresa</h1>
+  <form id="rutas" class="form" method="post" action="empresas_guardar">
+    <div class="form-group">
+      <input class="form-control" name="txtNombre" type="text" placeholder="Nombre Empresa" required>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="txtClave" type="text" placeholder="Clave" required>
+    </div>
+    <input class="btn-primary btn-medium" type="submit" value="Guardar">
+  </form>
+</div>
+
+<% if err!=nil %>
+    <div class="error">
+      <%= err %>
+    </div>
+<%end %>
