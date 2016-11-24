@@ -20,6 +20,7 @@ class ApiController < ApplicationController
       #Obtener las rutas
       routes = Route.all
 
+      if routes.length>0
       routes.each do |r|
         #Recorrer las ubicaciones por las que pasa la ruta
         locations = Location.joins("INNER JOIN route_locations ON locations.id=route_locations.location_id AND route_locations.route_id="+r.id.to_s)
@@ -31,16 +32,12 @@ class ApiController < ApplicationController
              break
           end
         end
-
       end
-
-
-
+      end
       resultados['Estado']=1
       resultados['Resultados'] = rutas_encontradas
 
     rescue Exception=>e
-      logger.error e.message
       resultados['Estado'] = 500;
     end
 
@@ -62,11 +59,14 @@ class ApiController < ApplicationController
       pois =InterestPoint.where("description ILIKE ?","%#{destino}%")
       coord = nil
       #Falta considerar lo que pasa cuando muchos sitios tiene un nombre semejante
-      pois.each do |p|
-        coord = Coordinate.new('',p.lat,p.lon)
-        break
-        #puntos_encontrados<<coord
+      if pois.length>0
+        pois.each do |p|
+          coord = Coordinate.new('',p.lat,p.lon)
+          break
+          #puntos_encontrados<<coord
+        end
       end
+
 
       #Obtener las rutas
       routes = Route.all
@@ -108,6 +108,7 @@ class ApiController < ApplicationController
       #Obtener las rutas
       routes = Route.all
 
+      if routes.length>0
       routes.each do |r|
         #Recorrer las ubicaciones por las que pasa la ruta
         locations = Location.joins("INNER JOIN route_locations ON locations.id=route_locations.location_id AND route_locations.route_id="+r.id.to_s)
@@ -119,13 +120,12 @@ class ApiController < ApplicationController
             break
           end
         end
-
+      end
       end
       resultados['Estado']=1
       resultados['Resultados'] = rutas_encontradas
 
     rescue Exception=>e
-      logger.error e.message
       resultados['Estado'] = 500;
     end
 
