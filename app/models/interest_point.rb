@@ -1,0 +1,3 @@
+class InterestPoint < ApplicationRecord
+
+end

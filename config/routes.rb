@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   post 'rutas_guardar' => 'ingresar#rutas_guardar'
   get 'empresas' => 'ingresar#empresas'
   post 'empresas_guardar' => 'ingresar#empresas_guardar'
+  get 'localizaciones' => 'ingresar#localizaciones'
+  post 'localizaciones_guardar' => 'ingresar#localizaciones_guardar'
+
 
   #Metodos disponibles para consultas
   get 'api/ruta_ubicacion' => 'api#ruta_ubicacion'
   get 'api/ruta_destino' => 'api#ruta_destino'
+  get 'api/ubicaciones_radio' => 'api#ubicaciones_radio'
 
 end

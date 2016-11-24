@@ -1,0 +1,3 @@
+class RouteLocation < ApplicationRecord
+
+end

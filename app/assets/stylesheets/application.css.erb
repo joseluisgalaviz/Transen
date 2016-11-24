@@ -231,3 +231,26 @@ h3 span{
 .valor-elemento{
     color:darkslategray;
 }
+
+
+.file-control{
+  width: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index:-1;
+}
+
+.file-control + label{
+  padding: 5px 10px;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: #0066ff;
+  display: inline-block;
+}
+
+.file-control:focus + label,
+.file-control + label:hover{
+  background-color: #0047b3;
+}
