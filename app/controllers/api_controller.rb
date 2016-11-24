@@ -38,7 +38,7 @@ class ApiController < ApplicationController
       resultados['Resultados'] = rutas_encontradas
 
     rescue Exception=>e
-      resultados['Estado'] = 500;
+      resultados['Estado'] = e.to_s;
     end
 
     res_json = resultados.to_json
@@ -89,7 +89,7 @@ class ApiController < ApplicationController
       #resultados['Resultados'] = [{:Empresa=>'El Vigia',:Ruta=>'Calle 9 - Sauzal'},{:Empresa=>'Transporte Brisa',:Ruta=>'Calle 9 - Sauzal'}]
       resultados['Resultados'] = rutas_encontradas
     rescue Exception=>e
-      resultados['Estado'] = 500;
+      resultados['Estado'] = e.to_s;
     end
 
     res_json = resultados.to_json
@@ -126,7 +126,7 @@ class ApiController < ApplicationController
       resultados['Resultados'] = rutas_encontradas
 
     rescue Exception=>e
-      resultados['Estado'] = 500;
+      resultados['Estado'] = e.to_s;
     end
 
     res_json = resultados.to_json

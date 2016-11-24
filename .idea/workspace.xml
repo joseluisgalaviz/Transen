@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ff59bff-d72e-479e-aaeb-f158056c3e55" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/documentacion.html.erb" afterPath="$PROJECT_DIR$/app/views/api/documentacion.html.erb" />
     </list>
     <ignored path="Transen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,12 +51,9 @@
       <file leaf-file-name="api_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-              <folding>
-                <element signature="e#1214#2791#0" expanded="false" />
-                <element signature="e#2795#3890#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -499,12 +495,12 @@
       <workItem from="1479531672823" duration="2573000" />
       <workItem from="1479544060369" duration="15083000" />
       <workItem from="1479928151234" duration="4073000" />
-      <workItem from="1479957761315" duration="22137000" />
+      <workItem from="1479957761315" duration="22256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76808000" />
+    <option name="totallyTimeSpent" value="76927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -950,12 +946,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding>
-            <element signature="e#1214#2791#0" expanded="false" />
-            <element signature="e#2795#3890#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
