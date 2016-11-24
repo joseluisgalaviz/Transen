@@ -116,8 +116,7 @@ class ApiController < ApplicationController
           coord_route = Coordinate.new('',l.lat,l.lon)
           if dist.inside?(coord,coord_route,radio)
             nombre_empresa = Company.find(r.company_id)
-            rutas_encontradas<< {:Empresa => nombre_empresa.name,:Ruta=>r.name}
-            break
+            rutas_encontradas<< {:Transporte => nombre_empresa.name,:Ruta=>r.name,:lat=>l.lat,:lon=>l.lon}
           end
         end
       end
