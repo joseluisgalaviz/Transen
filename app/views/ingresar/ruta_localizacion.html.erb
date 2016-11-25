@@ -1,0 +1,33 @@
+
+<div class="formulario">
+  <h1>Ingresar Ruta-Localización</h1>
+  <%= form_tag 'ruta_localizacion_guardar', method: :post, remote:true,multipart:true %>
+  <div class="form-group">
+    <input class="form-control" name="txtClave" type="text" placeholder="Clave" required>
+  </div>
+  <div class="form-group">
+    <input id="submitDatos" class="file-control" type="file" name="submitDatos">
+    <label for="submitDatos" id="file-label" class="form-label">Seleccionar Archivo</label>
+  </div>
+  <input class="btn-primary btn-medium" type="submit" value="Guardar">
+</div>
+
+
+
+<% if msg!=nil %>
+    <div class="msg">
+      <%= msg %>
+    </div>
+<%end %>
+
+<% if err!=nil %>
+    <div class="error">
+      <%= err %>
+    </div>
+<%end %>
+
+<script>
+  document.getElementById("submitDatos").onchange = function () {
+    document.getElementById("file-label").innerHTML = this.files[0].name;
+  };
+</script>

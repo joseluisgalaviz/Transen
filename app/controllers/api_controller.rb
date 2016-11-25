@@ -132,4 +132,18 @@ class ApiController < ApplicationController
     render :json => res_json
   end
 
+  def ubicaciones_radio_destino
+    resultados = Hash.new
+    begin
+
+
+      resultados['Estado']=1
+
+    rescue Exception=>e
+      resultados['Estado'] = 500
+    end
+    res_json = resultados.to_json
+    render :json => res_json
+  end
+
 end

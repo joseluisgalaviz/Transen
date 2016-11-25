@@ -11,18 +11,23 @@
       <nav class='primary-nav' role='navigation'>
         <ul>
           <li>
-            <a href='#h2-ubicacion'>
+            <a href='#ubicacion'>
               Ubicación destino
             </a>
           </li>
           <li>
-            <a href='#h2-destino'>
+            <a href='#destino'>
               Nombre Destino
             </a>
           </li>
           <li>
-            <a href='#h2-paradas'>
+            <a href='#paradas'>
               Paradas en un radio
+            </a>
+          </li>
+          <li>
+            <a href='#paradasDestino'>
+              Paradas para Destino
             </a>
           </li>
         </ul>
@@ -38,15 +43,26 @@
          Ofrecer servicio para el conocimiento de empresas de transportes y
          sus rutas.
         </p>
+        <p style="text-align: justify">
+          La motivación principal, es ayudar a las personas que recien visitan la ciudad o bien conocen muy poco aún.
+          Brindandoles información sobre el transporte público, las distintas empresas que manejan la operación del transporte,
+          así como las diversas rutas que ofrecen, reduciendo de esta manera los costos derivados de uso de transporte privado.
+          <br>
+          Transen ofrece el acceso a la información a través de peticiones get, por lo que facilita el acceso a los desarrolladores
+          de aplicaciones para los usuarios finales.
+        </p>
+         <h1>Métodos disponibles</h1>
          <hr>
       </div>
       <div class="metodos">
-        <h2 id="h2-ubicacion">Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
+        <h2 id="ubicacion">Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
         <div class="parametros">
           <h3>Parametros:</h3>
           <div class="parametros-desc">
-            <span class="nombre-parametro">lat</span> : <span class="tipo-dato">float</span> <br>
+            <span class="nombre-parametro">lat</span> : <span class="tipo-dato">float</span>
+            <div class="parametro-definicion">Latitud de destino del usuario</div>
             <span class="nombre-parametro">lon </span> : <span class="tipo-dato">float</span>
+            <div class="parametro-definicion">Longitud de destino del usuario</div>
           </div>
         </div>
 
@@ -79,7 +95,7 @@
                  },
                  {
                  "<span class="clave-elemento">Empresa</span>" : "<span class="valor-elemento">Transporte Brisa</span>",
-                 "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9 - Sauzal</span>"
+                 "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Sauzal Cetmar</span>"
                  } ]
               }
             </pre>
@@ -90,11 +106,12 @@
       </div>
 
       <div class="metodos">
-        <h2 id="h2-destino">Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
+        <h2 id="destino">Obtener las rutas que llevan a una ubicación destino <span>GET</span></h2>
         <div class="parametros">
           <h3>Parametros:</h3>
           <div class="parametros-desc">
             <span class="nombre-parametro">Nombre</span> : <span class="tipo-dato">string</span>
+            <div class="parametro-definicion">Nombre del destino</div>
           </div>
         </div>
 
@@ -138,13 +155,16 @@
       </div>
 
       <div class="metodos">
-        <h2 id="h2-paradas">Obtener las ubicaciones donde tomar camiones dentro de un radio especificado <span>GET</span></h2>
+        <h2 id="paradas">Obtener las ubicaciones donde tomar camiones dentro de un radio especificado <span>GET</span></h2>
         <div class="parametros">
           <h3>Parametros:</h3>
           <div class="parametros-desc">
             <span class="nombre-parametro">lat</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Latitud actual del usuario</div>
             <span class="nombre-parametro">lon</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Longitud actual del usuario</div>
             <span class="nombre-parametro">rad</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Radio de búsqueda</div>
           </div>
         </div>
 
@@ -191,5 +211,75 @@
 
         <hr>
       </div>
+
+      <div class="metodos">
+        <h2 id="paradasDestino">Obtener las ubicaciones donde tomar camiones dentro de un radio especificado y para ir la ubicación especifica <span>GET</span></h2>
+        <div class="parametros">
+          <h3>Parametros:</h3>
+          <div class="parametros-desc">
+            <span class="nombre-parametro">lat</span> : <span class="tipo-dato">decimal</span>
+             <div class="parametro-definicion">Latitud actual del usuario</div>
+            <span class="nombre-parametro">lon</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Longitud actual del usuario</div>
+            <span class="nombre-parametro">latDes</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Latitud del destino del usuario</div>
+            <span class="nombre-parametro">lonDes</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Longitud del destino del usuario</div>
+            <span class="nombre-parametro">rad</span> : <span class="tipo-dato">decimal</span>
+            <div class="parametro-definicion">Radio de búsqueda de paradas de camiones</div>
+          </div>
+        </div>
+
+        <div class="acceso">
+          <h3>Punto de acceso</h3>
+          <div class="url-acceso">
+            <span class="metodo">GET</span>
+            https://transen.herokuapp.com/api/ubicaciones_radio_destino
+          </div>
+        </div>
+
+        <div class="peticion">
+          <h3>Ejemplo de petición</h3>
+          <div class="peticion-ejemplo">
+            https://transen.herokuapp.com/api/ubicaciones_radio_destino?lat=31.8713375&lon=-116.6678474&latDes=31.868166&lonDes=-116.623965&rad=1000
+          </div>
+        </div>
+
+        <div class="respuesta">
+          <h3>Ejemplo de respuesta  <span class="label-json">json</span></h3>
+          <div class="respuesta-ejemplo" >
+            <pre class="codigo-json">
+
+              {
+                "<span class="clave-elemento">Estado</span>" : 1,
+                "<span class="clave-elemento">Resultados</span>" : [
+                  {
+                    "<span class="clave-elemento">Transporte</span>" : "<span class="valor-elemento">El Vigía</span>",
+                    "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Calle 9-Sauzal</span>",
+                    "<span class="clave-elemento">lat</span>" : 31.866508,
+                    "<span class="clave-elemento">lon</span>" : -116.667697
+                  },
+                  {
+                    "<span class="clave-elemento">Transporte</span>" : "<span class="valor-elemento">Transporte Brisa</span>",
+                    "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Sauzal CETMAR</span>",
+                    "<span class="clave-elemento">lat</span>" : 31.866796,
+                    "<span class="clave-elemento">lon</span>" : -116.667628
+                  },
+                  {
+                    "<span class="clave-elemento">Transporte</span>" : "<span class="valor-elemento">Trasnporte Blanco Rojo</span>",
+                    "<span class="clave-elemento">Ruta</span>" : "<span class="valor-elemento">Lomas Sauzal</span>",
+                    "<span class="clave-elemento">lat</span>" : 31.866796,
+                    "<span class="clave-elemento">lon</span>" : -116.667628
+                  }
+                  ]
+                }
+
+            </pre>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+
     </div>
   </section>

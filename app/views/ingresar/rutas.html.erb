@@ -3,6 +3,16 @@
 <div class="formulario">
   <h1>Ingresar Nueva Ruta</h1>
   <form id="rutas" class="form" method="post" action="rutas_guardar">
+      <div class="form-group">
+        <label for="empresa">Empresa : </label>
+        <br>
+      <select id="empresa" name="empresa">
+        <% empresas.each do |e| %>
+          <option value="<%=e.id %>"><%=e.name%></option>
+        <% end %>
+      </select>
+    </div>
+
     <div class="form-group">
       <input class="form-control" name="txtNombre" type="text" placeholder="Nombre Ruta" required>
     </div>
@@ -12,6 +22,13 @@
     <input class="btn-primary btn-medium" type="submit" value="Guardar">
   </form>
 </div>
+
+
+<% if msg!=nil %>
+    <div class="msg">
+      <%= msg %>
+    </div>
+<%end %>
 
 <% if err!=nil %>
   <div class="error">

@@ -12,6 +12,14 @@
     <input class="btn-primary btn-medium" type="submit" value="Guardar">
 </div>
 
+
+
+<% if msg!=nil %>
+    <div class="msg">
+      <%= msg %>
+    </div>
+<%end %>
+
 <% if err!=nil %>
     <div class="error">
       <%= err %>
@@ -19,7 +27,7 @@
 <%end %>
 
 <script>
-  document.getElementById("submitFile").onchange = function () {
+  document.getElementById("submitDatos").onchange = function () {
     document.getElementById("file-label").innerHTML = this.files[0].name;
   };
 </script>

@@ -12,6 +12,12 @@
   </form>
 </div>
 
+<% if msg!=nil %>
+    <div class="msg">
+      <%= msg %>
+    </div>
+<%end %>
+
 <% if err!=nil %>
     <div class="error">
       <%= err %>
