@@ -116,7 +116,7 @@ class ApiController < ApplicationController
         locations.each do |l|
           coord_route = Coordinate.new('',l.lat.to_f,l.lon.to_f)
           if dist.inside?(coord,coord_route,radio)
-            ubicaciones_encontradas << {:lat=>l.lat,:lon=>l.lon}
+            ubicaciones_encontradas << {:lat=>l.lat.to_f,:lon=>l.lon.to_f}
           end
         end
         if ubicaciones_encontradas.length>0
@@ -175,7 +175,7 @@ class ApiController < ApplicationController
           locations.each do |l|
             coord_route = Coordinate.new('',l.lat.to_f,l.lon.to_f)
             if dist.inside?(coord,coord_route,radio)
-              ubicaciones_encontradas << {:lat=>l.lat,:lon=>l.lon}
+              ubicaciones_encontradas << {:lat=>l.lat.to_f,:lon=>l.lon.to_f}
             end
           end
           if ubicaciones_encontradas.length>0
