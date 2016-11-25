@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ff59bff-d72e-479e-aaeb-f158056c3e55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/ingresar/punto_interes.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/ingresar/ruta_localizacion.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/db/migrate/20161124081705_create_companys.rb" afterPath="$PROJECT_DIR$/db/migrate/20161124081705_create_companies.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ingresar_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/ingresar_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/documentacion.html.erb" afterPath="$PROJECT_DIR$/app/views/api/documentacion.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ingresar/empresas.html.erb" afterPath="$PROJECT_DIR$/app/views/ingresar/empresas.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ingresar/localizaciones.html.erb" afterPath="$PROJECT_DIR$/app/views/ingresar/localizaciones.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ingresar/rutas.html.erb" afterPath="$PROJECT_DIR$/app/views/ingresar/rutas.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="Transen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="documentacion.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="documentacion.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/api/documentacion.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="347">
+              <caret line="64" column="44" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#div#3;n#div#0;n#section#0;n#!!top" expanded="false" />
@@ -86,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.css.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
-              <caret line="295" column="22" selection-start-line="295" selection-start-column="22" selection-end-line="295" selection-end-column="22" />
+              <caret line="299" column="22" selection-start-line="299" selection-start-column="22" selection-end-line="299" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -152,8 +140,8 @@
         <option value="$PROJECT_DIR$/app/controllers/ingresar_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/ingresar/punto_interes.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" />
         <option value="$PROJECT_DIR$/app/views/api/documentacion.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" />
       </list>
     </option>
   </component>
@@ -660,12 +648,12 @@
       <workItem from="1479544060369" duration="15083000" />
       <workItem from="1479928151234" duration="4073000" />
       <workItem from="1479957761315" duration="23437000" />
-      <workItem from="1480017110276" duration="10988000" />
+      <workItem from="1480017110276" duration="11180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89096000" />
+    <option name="totallyTimeSpent" value="89288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1036,23 +1024,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="295" column="22" selection-start-line="295" selection-start-column="22" selection-end-line="295" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/documentacion.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        <state relative-caret-position="347">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#div#3;n#div#0;n#section#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#section#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="299" column="22" selection-start-line="299" selection-start-column="22" selection-end-line="299" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
