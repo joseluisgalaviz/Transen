@@ -113,8 +113,8 @@ class IngresarController < ApplicationController
           datos_localizacion.each_line do |linea|
             ubicacion = linea.split(',')
             ruta_loc = RouteLocation.new
-            ruta_loc.route_id = ubicacion[1].to_i
-            ruta_loc.location_id = ubicacion[2].to_i
+            ruta_loc.route_id = ubicacion[0].to_i
+            ruta_loc.location_id = ubicacion[1].to_i
             ruta_loc.save
           end
           return render 'ruta_localizacion'  , :locals => {:err=>nil,:msg=>'Guardado correctamente'}
