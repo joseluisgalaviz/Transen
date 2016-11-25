@@ -16,14 +16,17 @@ class Distance
       return d;
     rescue Exception => e
       print e.to_s;
-      return 0;
+      return -1;
     end
   end
 
   public
   def inside?(l1,l2,r)
     distance = calculate_distance(l1,l2);
-    if(distance<=r)
+    if distance<0
+      return false
+    end
+    if distance<=r
       true
     else
       false
